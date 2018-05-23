@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+// Define defaults for each variable.
+
+$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$base-font-size:   16px !default;
+$base-font-weight: 400 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$base-line-height: 1.5 !default;
+
+$spacing-unit:     30px !default;
+
+// Colors
+$white:                 #FFF;
+
+$text-color:            #111 !default;
+$text-color-light:      #888 !default;
+$text-color-white:      #DDD !default;
+$selection-color:       #2D954C !default;
+
+$background-color:          #FDFDFD !default;
+$main-background-color:     #FDFDFD !default;
+$footer-background-color:   #251442 !default;
+
+$banner-background-color:             #555555 !default;
+$background-color-transparent:        rgba(253,253,253,0.0) !default;
+$background-color-transluscent:       rgba(253,253,253,0.75) !default;
+$background-color-dark-transluscent:  rgba(35,35,35,0.75) !default;
+$background-color-opaque:             rgba(253,253,253,1.0) !default;
+
+$brand-color:           #deb3f4 !default;
+$brand-accent:          #deb3f4 !default;
+$brand-color-pastel:    lighten(desaturate( $brand-color, 15% ), 17%) !default;
+$link-color:            darken($brand-color, 25%) !default;
+
+$grey-color:            #828282 !default;
+$grey-color-light:      lighten($grey-color, 40%) !default;
+$grey-color-dark:       darken($grey-color, 25%) !default;
+
+$staff-box-color:       $footer-background-color !default;
+$staff-box-font-color:  $text-color-white !default;
+// Figures
+$figure-box-color:      $grey-color-light !default;
+// Tables
+$table-box-color:       $grey-color-light !default;
+// Volume box
+$content-highlight-box-color: $footer-background-color !default;
+// Ribbon defaults
+$ribbon-color:          #CD1F23 !default;
+$ribbon-color-text:     $white !default;
+
+
+
+$table-text-align: left !default;
+
+// Width of the content area
+$content-width:    1220px !default;
+$header-width:     1620px !default;
+
+$on-palm:          600px !default;
+$on-laptop:        800px !default;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
+
+// Import partials.
+@import
+  "minima/base",
+  "minima/layout",
+  "minima/syntax-highlighting"
+;
