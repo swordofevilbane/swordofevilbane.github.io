@@ -31,6 +31,7 @@ $background-color-opaque:             rgba(253,253,253,1.0) !default;
 $brand-color:           #deb3f4 !default;
 $brand-accent:          #deb3f4 !default;
 $brand-color-pastel:    lighten(desaturate( $brand-color, 15% ), 17%) !default;
+$brand-color-complement:rgb(93, 141, 235) !default;
 $link-color:            darken($brand-color, 25%) !default;
 
 $grey-color:            #828282 !default;

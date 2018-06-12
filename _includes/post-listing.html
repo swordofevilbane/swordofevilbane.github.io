@@ -1,0 +1,18 @@
+<div class="post-listing-block">
+  <h3><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+  <span class="post-meta">
+    {%- if post.date -%}
+      {{ post.date | date: date_format }}
+    {%- endif -%}
+  </span>
+{%- if post.author -%}
+  <span class="post-meta"> | </span>
+  <span class="post-meta">{%- for author in post.author -%}
+    {%- if forloop.index != 1 -%}&nbsp;•&nbsp;{%- endif -%}<span itemprop="name">{{ author.name }}</span>
+    {%- endfor -%}
+  </span>
+{%- endif -%}
+{%- if post.journal -%}
+  <br><span class="post-meta"> {{ post.journal }}</span>
+{%- endif -%}
+</div>

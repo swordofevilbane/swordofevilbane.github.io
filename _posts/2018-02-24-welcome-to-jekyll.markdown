@@ -1,9 +1,19 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2018-02-24 23:03:27 -0500
-categories: jekyll update
+title:  "Welcome"
+type: article
+date:   2018-02-24
+tags: ["tag 1", "tag 2"]
+journal: Journal Field
+author:
+  - name: Author Name
+    affiliation:
+      - Department, University
+abstract: |- # COMMENT: make sure to retain proper tabbing
+  This is a sample document with some instructions
 ---
+
+
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
 To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.

@@ -224,6 +224,14 @@
   color: $grey-color;
 }
 
+.post-authors {
+  margin-bottom: 0;
+}
+
+.post-affiliations {
+  padding-left: 1em;
+}
+
 .post-link {
   display: block;
   @include relative-font-size(1.5);
@@ -254,11 +262,39 @@
   }
 }
 
+.post-abstract-box {
+  padding: 1em;
+  background-color: $grey-color-light;
+  margin-bottom: 2ex;
+
+  .post-abstract {
+    border-bottom: 1px $grey-color solid;
+  }
+  .post-keywords {
+    padding-top: 1ex;
+    margin: 0;
+  }
+}
+
+.post-references {
+  padding-left: 1em;
+  border-left: 3px #777 solid;
+  margin-bottom: $spacing-unit;
+  columns: 2;
+
+  & p {
+    font-size: $small-font-size;
+    color: $grey-color;
+  }
+}
+
 .post-content {
   margin-bottom: $spacing-unit;
 
   h2 {
     @include relative-font-size(2);
+    border-bottom: 1px $grey-color dashed;
+    margin-top: 2ex;
 
     @include media-query($on-laptop) {
       @include relative-font-size(1.75);
@@ -267,6 +303,7 @@
 
   h3 {
     @include relative-font-size(1.625);
+    margin-bottom: 0;
 
     @include media-query($on-laptop) {
       @include relative-font-size(1.375);
@@ -279,6 +316,69 @@
     @include media-query($on-laptop) {
       @include relative-font-size(1.125);
     }
+  }
+}
+
+/**
+########  ##        #######   ######  ##    ##  ######
+##     ## ##       ##     ## ##    ## ##   ##  ##    ##
+##     ## ##       ##     ## ##       ##  ##   ##
+########  ##       ##     ## ##       #####     ######
+##     ## ##       ##     ## ##       ##  ##         ##
+##     ## ##       ##     ## ##    ## ##   ##  ##    ##
+########  ########  #######   ######  ##    ##  ######
+ */
+// CV item
+.cv-item {
+  margin-left: 3em;
+  border-bottom: solid 1px $grey-color-light;
+
+  .cv-item-title {
+    margin: 0;
+    @include relative-font-size(1.4);
+  }
+  .cv-item-meta {
+    @include relative-font-size(0.9);
+    font-weight: bold;
+    color: $grey-color;
+  }
+  .cv-item-text {
+    color: $grey-color-dark;
+  }
+}
+
+.post-listing-block {
+  margin-bottom: $spacing-unit;
+}
+
+
+/**
+ ######## ####  ######   ##     ## ########  ########  ######
+ ##        ##  ##    ##  ##     ## ##     ## ##       ##    ##
+ ##        ##  ##        ##     ## ##     ## ##       ##
+ ######    ##  ##   #### ##     ## ########  ######    ######
+ ##        ##  ##    ##  ##     ## ##   ##   ##             ##
+ ##        ##  ##    ##  ##     ## ##    ##  ##       ##    ##
+ ##       ####  ######    #######  ##     ## ########  ######
+ */
+.figure-wrapper {
+  margin-top: $spacing-unit * 1.865;
+  margin-bottom: $spacing-unit * 1.865;
+  //border: 1px solid $grey-color-dark;
+  background-color: $figure-box-color;
+  padding: $spacing-unit * 0.5;
+  text-align: left;
+
+  img {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .figure-caption {
+    color: $grey-color;
+    margin-top: $spacing-unit / 3;
   }
 }
 

@@ -1,0 +1,14 @@
+<div class="cv-item">
+  <h3 class="cv-item-title">{{ include.title }}</h3>
+  <h4 class="cv-item-meta">
+    {%- if include.date -%}
+      <span class="cv-item-date">{{ include.date }}&nbsp;</span><br>
+    {%- endif -%}
+    {%- if include.location -%}
+      <span class="cv-item-location">{{ include.location }}&nbsp;</span><br>
+    {%- endif -%}
+  </h4>
+  <div class="cv-item-text">
+    {{ include.content | markdownify }}
+  </div>
+</div>
